@@ -27,6 +27,9 @@ const Header = styled.section`
 `
 const Log = styled.img`
    width: 18vw;
+   &:hover{
+      cursor: pointer;
+    }
 `
 const Navigation = styled.nav`
   display: flex;

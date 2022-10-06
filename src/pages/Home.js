@@ -5,6 +5,11 @@ import mainBanner from '../assets/banner1.png'
 import banner2 from '../assets/banner2.png'
 import banner3 from '../assets/banner3.png'
 import phone from '../assets/base.png'
+import verdura from '../assets/verduras.png'
+import corrida from '../assets/corrida.png'
+import AppStore from '../assets/appstore.png'
+import GooglePlay from '../assets/googleplay.png'
+import Doblephone from '../assets/doblephone.png'
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -140,7 +145,9 @@ const Banner3 = styled.div`
    justify-content: center;
 `
 const Section3 = styled.section`
-
+  display: flex;
+  flex-direction: column;
+  height: 180vh;
 `
 const Phone = styled.img`
   width: 20vw;
@@ -156,6 +163,7 @@ const Lorem = styled.div`
   }
   h2{
     font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-style: italic;
     font-size: 45px;
   }
@@ -171,9 +179,134 @@ const Boxfit = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+padding-bottom: 15vh;
+  h2{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 45px;
+}
+  h3{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 45px;
+}
    button{
-    width: 10vw;
-   }
+    font-size: 1em;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 20px 25px 20px 25px;
+    background-color: #3B24AD;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-top: 10vh;
+    &:hover{
+      cursor: pointer;
+    }
+}
+`
+const Divimg = styled.section`
+  display: flex;
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+img{
+  width: 20vw;
+  margin-left: 14vw;
+  margin-right: 14vw;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+p{
+  background-color: #230F7F;
+  width: 20vw;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif;
+  &:hover{
+      cursor: pointer;
+    }
+}
+`
+const Footer = styled.section`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #E7E3FC;
+  height: 60vh;
+  h2{
+    font-size: 2em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    font-style: italic;
+    color: #0A0A0A;
+    background-color: transparent;
+  }
+  span{
+    font-weight: 900;
+    font-size: 45px;
+    background-color: transparent;
+  }
+  p{
+    width: 35vw;
+    color: #424242;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+    background-color: transparent;
+  }
+ 
+`
+const Father = styled.div`
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ background-color: transparent;
+`
+const Logo = styled.div`
+ display: flex;
+ background-color: transparent;
+
+ img{
+    width: 12vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
+  }
+  &:hover{
+      cursor: pointer;
+    }
+
+`
+const DivPhone = styled.div`
+ display: flex;
+ align-items: center;
+ background-color: transparent;
+ margin-top: 20vh;
+ img{
+  width: 30vw;
+ height: 50vh;
+ background-color: transparent;
+ margin-left: 5vw;
+ }
+`
+const Faixa = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: #424242;
+  width: 45vw;
+  height: 30vh;
+  margin-bottom: 10vh;
+  border-radius: 20px 25px 20px 25px;
 `
 
 export default class App extends React.Component{
@@ -220,15 +353,36 @@ export default class App extends React.Component{
               </Lorem>
               <Boxfit>
                 <h2>SAIBA O QUE OFERECEMOS</h2>
-                <div>
-                  <img src="" alt=""/>
-                  <img src="" alt=""/>
-                </div>
-                <h2>Venha ser mais saudável</h2>
+                <Divimg>
+                  <div>
+                     <img src={verdura} alt="frutas e verduras"/>
+                  <p>Dietas</p>
+                  </div>
+                 <div>
+                  <img src={corrida} alt="corrida"/>
+                  <p>Treinos</p>
+                 </div>
+                  
+                </Divimg>
+                <h3>Venha ser mais saudável</h3>
                 <button>Comece agora</button>
               </Boxfit>
             </Section3>
-            
+            <Footer>
+              <Father>
+                <h2><span>BEFIT</span> App</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec elementum purus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+ Aliquam id quam augue. Cras nulla est, lacinia sit amet purus at, interdum gravida augue. Nam sed pretium.</p>
+                <Logo>
+                  <img src={GooglePlay} alt='logo do google play'/>
+                  <img src={AppStore} alt='logo da app store'/>
+                </Logo>
+              </Father>
+              <DivPhone>
+                
+                <Faixa><img src={Doblephone} alt=''/></Faixa>
+              </DivPhone>
+            </Footer>
 
             </>
         )
