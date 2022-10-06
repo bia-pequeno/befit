@@ -32,16 +32,22 @@ const Section = styled.section`
 `
 const Divbanner = styled.div`
   display: flex;
-  width: 25vw;
+  width: 30vw;
   justify-content: center;
   padding-top: 35vh;
   z-index: 1;
   background-color: transparent;
   h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.3em;
+    font-size: 3em;
+    font-weight: 800;
     color: #FFFFFF;
     background-color: transparent;
+  }
+  span{
+    background-color: transparent;
+    font-weight: 500;
+    font-style: italic;
   }
 `
 
@@ -71,14 +77,19 @@ const Sectionbox = styled.section`
 `
 const Phase = styled.div`
   font-size: 2em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  
   color: #0A0A0A;
   text-align: center;
   display: flex;
   position: absolute;
+  h2{
+    font-weight: 800;
+  }
 `
 const Span = styled.span`
   color: #3B24AD;
+  font-weight: 800;
 `
 const Divb2 = styled.section`
   display: flex;
@@ -88,6 +99,7 @@ const Divb2 = styled.section`
     color: #FFFFFF;
     background-color: transparent;
     font-size: 3em;
+    font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* margin-top: 5vh; */
     height: 15vh;
@@ -121,6 +133,7 @@ const Divb3 = styled.section`
     color: #FFFFFF;
     background-color: transparent;
     font-size: 3em;
+    font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 15vh;
   }
@@ -147,7 +160,7 @@ const Banner3 = styled.div`
 const Section3 = styled.section`
   display: flex;
   flex-direction: column;
-  height: 180vh;
+  height: 160vh;
 `
 const Phone = styled.img`
   width: 20vw;
@@ -239,7 +252,7 @@ const Footer = styled.section`
   justify-content: space-evenly;
   align-items: center;
   background-color: #E7E3FC;
-  height: 60vh;
+  height: 65vh;
   h2{
     font-size: 2em;
     font-family: 'Rubik', sans-serif;
@@ -304,8 +317,8 @@ const Faixa = styled.div`
   align-items: center;
   background-color: #424242;
   width: 45vw;
-  height: 30vh;
-  margin-bottom: 10vh;
+  height: 35vh;
+  margin-bottom: 5vh;
   border-radius: 20px 25px 20px 25px;
 `
 
@@ -316,7 +329,7 @@ export default class App extends React.Component{
             <GlobalStyle/>
             <Section>
                 <Divbanner>
-                    <h1>Seu Personal Personal Trainer </h1>
+                    <h1>Seu <span>Personal</span> Personal Trainer </h1>
                 </Divbanner>
                 <Boxbanner></Boxbanner>
                 
