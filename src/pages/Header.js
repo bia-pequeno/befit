@@ -6,6 +6,7 @@ import Logo from "../assets/logo.png"
 import Home from './Home'
 import Sobre from './Sobre'
 import Login from './Login'
+import Cadastro from './Cadastro'
 
 const GlobalStyle = createGlobalStyle`
   *{

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, Router, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import Footer from './Footer'
@@ -38,6 +37,18 @@ const Title = styled.div`
    justify-content: center;
    margin-top: 10vh;
 `
+const Barra = styled.div`
+    border: 2px black solid;
+    border-radius: 30px 35px 30px 35px;
+    width: 27vw;  
+`
+const Cor = styled.div`
+  background-color: #3918D9;
+  border-radius: 30px 35px 30px 35px;
+  width: 8vw;
+  height: 2vh;
+  z-index: 1;
+`
 const Inputs = styled.div`
    display: flex;
    justify-content: center;
@@ -70,16 +81,16 @@ const Boxbutton = styled.div`
    margin-top: 6vh;
    div{
     display: flex;
-    flex-direction: column;
    }
 `
 const Button1 = styled.button`
     color: #FFFFFF;
     background-color: #3918D9;
     border: 1px solid #000000;
-    width: 23vw;
+    width: 10vw;
     height: 6vh;
     margin-bottom: 3vh;
+    margin-right: 3vw;
     font-size: 1em;
     font-weight: 700;   
 `
@@ -87,12 +98,11 @@ const Button2 = styled.button`
     color: #000000;
     background-color: #D9D9D9;
     border: 1px solid #000000;
-    width: 23vw;
+    width: 10vw;
     height: 6vh;
     font-size: 1em;
     font-weight: 700;
 `
-
 
 export default class App extends React.Component{
     render(){
@@ -103,7 +113,12 @@ export default class App extends React.Component{
             <Section>
                 <Boxlogin>
                     <Title>
-                        <h1>Entre com seu email e senha</h1>
+                        <div>
+                            <Barra>
+                                <Cor></Cor>
+                            </Barra>
+                        </div>
+                        
                     </Title>
                     <Inputs>
                         <div>
@@ -111,13 +126,14 @@ export default class App extends React.Component{
                              <input type='email' />
                              <h4>SENHA</h4>
                              <input type='password' />
-                             <p>Esqueceu sua senha?</p> 
+                             <h4>CONFIRMAR SENHA</h4>
+                             <input type='password' />
                         </div>
                     </Inputs>
                     <Boxbutton>
                         <div>
-                            <Button1>ENTRAR</Button1>
-                            <Button2>PRIMEIRO ACESSO</Button2>
+                            <Button1>VOLTAR</Button1>
+                            <Button2>PROXIMO</Button2>
                         </div>
                     </Boxbutton>  
                 </Boxlogin>
