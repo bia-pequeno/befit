@@ -16,12 +16,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #D9D9D9;
     @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;900&family=Montserrat+Alternates:ital,wght@0,500;1,200&family=Montserrat:ital,wght@0,200;1,600&family=Raleway:ital,wght@0,100;0,400;1,200;1,400&family=Rubik:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;900&family=Montserrat+Alternates:ital,wght@0,500;1,200&family=Montserrat:ital,wght@0,200;1,600&family=Raleway:ital,wght@0,100;0,400;1,200;1,400&family=Rubik:wght@300;600&display=swap');
   }
   body{
-    
+    background-color: #D9D9D9;
   }
 `
 const Section = styled.section`

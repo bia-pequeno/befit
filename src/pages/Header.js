@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Logo from "../assets/logo.png"
 import Home from './Home'
 import Sobre from './Sobre'
+import Login from './Login'
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -37,6 +38,7 @@ const Navigation = styled.nav`
   align-items: center;
   p{
     display: flex;
+    color: #424242;
     margin-left: 2vw;
     justify-content: center;
     align-items: center;
@@ -56,20 +58,22 @@ export default class App extends React.Component{
             <Router>
             <GlobalStyle/>
             <Header>
-                <Log src={Logo} alt="logo"/>
+              <Link to="/"><Log src={Logo} alt="logo"/></Link>
+                
                 <div>
                  
                  <Navigation>
                         <Link to="/"><p>Home</p></Link>
                         <p>Exercicios</p>
                         <Link to="sobre"><p>Sobre</p></Link>
-                        <p>Começar</p>
+                        <Link to="login"><p>Começar</p></Link>
                  </Navigation>
                 </div>
             </Header>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="sobre" element={<Sobre/>}/>
+                    <Route path="login" element={<Login/>}/>
                 </Routes>
             
             </Router>
